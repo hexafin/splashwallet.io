@@ -211,6 +211,11 @@ var _default = function _default() {
           fileName: _jsxFileName,
           lineNumber: 8
         }
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", { rel: "icon", type: "image/png", href: "./static/splash-favicon.png", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
       })
     )
   );
