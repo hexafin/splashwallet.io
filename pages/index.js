@@ -4,10 +4,12 @@ import axios from 'axios'
 import debounce from 'lodash.debounce'
 import Button from '../components/Button'
 import LoadingCircle from '../components/LoadingCircle'
+import Waves from '../components/Waves'
 
 export default () => (
 	<Layout>
 		<Hero/>
+		<Waves />
 	</Layout>
 )
 
