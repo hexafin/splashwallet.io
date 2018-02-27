@@ -8,9 +8,10 @@ import LoadingCircle from '../components/LoadingCircle'
 export default () => (
 	<Layout>
 		<Hero/>
-		<SplashTagBar />
 	</Layout>
 )
+
+		// <SplashTagBar />
 
 class SplashTagBar extends React.Component {
 	constructor() {
@@ -175,8 +176,8 @@ class SplashTagBar extends React.Component {
 const Hero = () => (
 	<div>
 		<img src="./static/app_Icon.png"/>
-		<h1>The most user friendly wallet for bitcoin.</h1>
-		<h2>Send and receive money from your splashtag</h2>
+		<h1>Coming March 2018.</h1>
+		<h2>Changing bitcoin forever.</h2>
 
 		<style jsx>{`
 			div {
@@ -184,6 +185,7 @@ const Hero = () => (
 				justify-content: center;
 				flex-direction: column;
 				align-items: center;
+				margin-top: 100px;
 			}
 
 			img {
