@@ -14,10 +14,10 @@ export default () => {
       <Bodymovin options={bodymovinOptions} />
       <style jsx global>{`
         .waves-animation > .react-bodymovin-container {
-          position: absolute;
-          bottom: -10px;
+          position: fixed;
+          bottom: -50px;
           left: -10px;
-          /* right: 0; */
+          z-index: -10;
           width: 110vw;
         }
       `}

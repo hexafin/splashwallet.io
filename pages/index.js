@@ -178,7 +178,7 @@ class SplashTagBar extends React.Component {
 const Hero = () => (
 	<div>
 		<img src="./static/app_Icon.png"/>
-		<h1>Coming March 2018.</h1>
+		<h1>Coming March 2018</h1>
 		<h2>Changing bitcoin forever.</h2>
 
 		<style jsx>{`
