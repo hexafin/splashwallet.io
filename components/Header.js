@@ -4,7 +4,7 @@ import Logo from './Logo'
 const Header = () => (
 	<div>
 		<Logo />
-		<a href="https://medium.com/splashwallet/">Learn more</a>
+		<a href="https://medium.com/splash-wallet">Learn more</a>
 		<style jsx>{`
 			div {
 				display: flex;
