@@ -13,7 +13,6 @@ export default () => {
     <div className="checkmark-animation">
       <Bodymovin options={bodymovinOptions} />
       <style jsx global>{`
-
         .checkmark-animation {
           position: absolute;
           right: 12px;

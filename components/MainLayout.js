@@ -21,6 +21,19 @@ export default ({children}) => (
 			  transition: all 150ms ease;
 			}
 
+			body, html {
+				margin: 0;
+			}
+
+			//for waves-animation
+			html {
+				background: #3B1BDB;
+			}
+
+			body {
+				background: white;
+			}
+
 			a {
 				text-decoration: none;
 				color: ${colors.darkGrey};

@@ -48,7 +48,8 @@ const Button = ({children, disabled, onClick, width}) => {
 			}
 
 			.disabled:hover {
-				transform: scale(1)
+				transform: scale(1);
+				background: #E4E3E5;
 			}
 
 

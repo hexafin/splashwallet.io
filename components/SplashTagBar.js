@@ -5,6 +5,7 @@ import Checkmark from './Checkmark'
 import axios from 'axios'
 import debounce from 'lodash.debounce'
 
+const api = 'https://us-central1-hexa-splash.cloudfunctions.net'
 class SplashTagBar extends React.Component {
 	constructor() {
 		super()
@@ -21,7 +22,9 @@ class SplashTagBar extends React.Component {
 
 	handleSubmit(event) {
 		const splashtag = this.state.splashtag
+
 		if (this.validateSplashtag(splashtag)) {
+			axios.post(`${api}/claimSplashtag?splashtag=${splashtag}`)
 			this.setState({
 				submitted: true, 
 				validationError: false,
@@ -81,7 +84,7 @@ class SplashTagBar extends React.Component {
 
 	checkIfTagAvailable(splashtag) {
 
-		const url = `https://us-central1-hexa-splash.cloudfunctions.net/splashtagAvailable?splashtag=`
+		const url = `${api}/splashtagAvailable?splashtag=`
 		
 		axios.get(`${url}${splashtag}`)
 			.then(result => {
@@ -186,8 +189,9 @@ class SplashTagBar extends React.Component {
 						color: ${validationError ? '#ff3366' : colors.dark};
 						font-weight: 500;
 						border: none;
-						box-shadow: rgba(63,63,63,0.08) 0 6px 34px 0;
-
+						box-shadow: rgba(63,63,63,0.09) 0 6px 34px 0;
+						border-radius: 4px;
+						-webkit-appearance: none;
 					}
 
 					@media (max-width: 550px) {
@@ -202,8 +206,6 @@ class SplashTagBar extends React.Component {
 					.input-bar {
 						position: relative;
 					}
-
-
 
 					input::placeholder {
 						color: ${colors.grey};
@@ -225,6 +227,8 @@ class SplashTagBar extends React.Component {
 
 					.validationError {
 						margin: 12px auto;
+						color: ${colors.darkGrey};
+						font-weight: 500;
 					}
 
 

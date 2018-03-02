@@ -3,7 +3,7 @@ import { colors } from '../lib/constants'
 const Hero = () => (
 	<div>
 		<img src="./static/app_Icon.png"/>
-		<h1>The most user friendly bitcoin wallet</h1>
+		<h1>Using bitcoin shouldn't be hard</h1>
 		<h2>Reserve your splashtag below</h2>
 
 		<style jsx>{`

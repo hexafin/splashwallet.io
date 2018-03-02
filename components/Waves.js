@@ -1,5 +1,5 @@
 import Bodymovin from 'react-bodymovin';
-import * as animation from '../animations/waves.json'
+import * as animation from '../animations/waves2.json'
 
 export default () => {
   const bodymovinOptions = {
@@ -13,12 +13,18 @@ export default () => {
     <div className="waves-animation">
       <Bodymovin options={bodymovinOptions} />
       <style jsx global>{`
-        .waves-animation > .react-bodymovin-container {
-          position: fixed;
-          bottom: -50px;
-          left: -10px;
-          z-index: -10;
-          width: 110vw;
+        .waves-animation {
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          margin-top: 20px;
+        }
+            
+        .waves-animation > .react-bodymovin-container > svg {
+          margin-bottom: -10px;
         }
       `}
       </style>
