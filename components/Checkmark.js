@@ -15,8 +15,8 @@ export default () => {
       <style jsx global>{`
         .checkmark-animation {
           position: absolute;
-          right: 12px;
-          top: 22px;
+          right: 17px;
+          top: 23px;
         }
         .checkmark-animation > .react-bodymovin-container {
           width: 20px;

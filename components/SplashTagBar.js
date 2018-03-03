@@ -4,7 +4,7 @@ import LoadingCircle from './LoadingCircle'
 import Checkmark from './Checkmark'
 import axios from 'axios'
 import debounce from 'lodash.debounce'
-
+import Input from './Input'
 const api = 'https://us-central1-hexa-splash.cloudfunctions.net'
 class SplashTagBar extends React.Component {
 	constructor() {
@@ -30,6 +30,7 @@ class SplashTagBar extends React.Component {
 				validationError: false,
 				checkingAvailability: false,
 			})
+			this.props.handleSubmit(splashtag)
 		} else {
 			this.setState({validationError: true})
 		}
@@ -150,23 +151,14 @@ class SplashTagBar extends React.Component {
 			}
 		}
 
-		const showCheckmark = () => {
-			if (tagAvailable && splashtag.length > 2 && !validationError) {
-				return <Checkmark />
-			} 
-		}
-
 		return (
 			<div className="wrap">
 					<div className="splashtagbar">
-					<div className="input-bar">
-						<input 
-						onChange={this.handleChange}
+					<Input 
+						isValid={tagAvailable && splashtag.length > 2 && !validationError}
 						value={this.state.splashtag}
-						type="text"
-						placeholder="Choose your splashtag"></input>
-						 {showCheckmark()}
-					</div>
+						handleChange={this.handleChange}
+						placeholder="Choose your splashtag"/>
 					<Button 
 						disabled={buttonDisabled()}
 						onClick={this.handleSubmit}>
@@ -182,37 +174,6 @@ class SplashTagBar extends React.Component {
 						justify-content: center;
 						flex-direction: column;
 					}
-					input {
-						width: 220px;
-						font-size: 18px;
-						padding: 18px 20px;
-						color: ${validationError ? '#ff3366' : colors.dark};
-						font-weight: 500;
-						border: none;
-						box-shadow: rgba(63,63,63,0.09) 0 6px 34px 0;
-						border-radius: 4px;
-						-webkit-appearance: none;
-					}
-
-					@media (max-width: 550px) {
-						input {
-							width: calc(100% - 40px);
-						}
-						.input-bar {
-							width: 100%;
-						}
-					}
-
-					.input-bar {
-						position: relative;
-					}
-
-					input::placeholder {
-						color: ${colors.grey};
-					}
-					input:focus {
-						outline: 0;
-					}
 
 					.splashtagbar {
 						opacity: 1;
@@ -221,16 +182,11 @@ class SplashTagBar extends React.Component {
     				justify-content: center;
 					}
 
-					.fade-out {
-						opacity: 0;
-					}
-
 					.validationError {
 						margin: 12px auto;
 						color: ${colors.darkGrey};
 						font-weight: 500;
 					}
-
 
 					`}
 				</style>
