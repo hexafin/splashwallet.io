@@ -1,14 +1,14 @@
 import { colors } from '../lib/constants'
 import Checkmark from './Checkmark'
 
-const Input = ({isValid, value, placeholder, handleChange}) => (
+const Input = ({isValid, showCheckmark, value, placeholder, handleChange}) => (
 	<div className="input-bar">
 		<input 
 		onChange={handleChange}
 		value={value}
 		type="text"
 		placeholder={placeholder}></input>
-		 {isValid && <Checkmark />}
+		 {showCheckmark && <Checkmark />}
 		<style jsx>{`
 			input {
 				width: 220px;

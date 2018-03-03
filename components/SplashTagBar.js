@@ -6,6 +6,7 @@ import axios from 'axios'
 import debounce from 'lodash.debounce'
 import Input from './Input'
 const api = 'https://us-central1-hexa-splash.cloudfunctions.net'
+
 class SplashTagBar extends React.Component {
 	constructor() {
 		super()
@@ -155,7 +156,8 @@ class SplashTagBar extends React.Component {
 			<div className="wrap">
 					<div className="splashtagbar">
 					<Input 
-						isValid={tagAvailable && splashtag.length > 2 && !validationError}
+						isValid={!validationError}
+						showCheckmark={(tagAvailable && splashtag.length > 2 && !validationError)}
 						value={this.state.splashtag}
 						handleChange={this.handleChange}
 						placeholder="Choose your splashtag"/>
