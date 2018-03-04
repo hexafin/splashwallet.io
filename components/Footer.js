@@ -4,7 +4,6 @@ export default () => (
 		<style jsx>{`
 			div {
 				text-align: center;
-				background: #3b1bdb;
 				color: #fff;
 			 	width: 100vw;
         position: relative;
