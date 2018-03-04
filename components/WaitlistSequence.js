@@ -85,7 +85,7 @@ class WaitlistSequence extends Component {
 } 
 
 const Wel = easeIn({delay: 500})(Welcome)
-const EaseInPhoneCapture = easeIn({delay: 1500})(PhoneCapture)
-const EaseInTimeMessage = easeIn({delay: 1200})(TimeMessage)
+const EaseInPhoneCapture = easeIn({delay: 2500})(PhoneCapture)
+const EaseInTimeMessage = easeIn({delay: 1300})(TimeMessage)
 
 export default WaitlistSequence
