@@ -6,7 +6,7 @@ import { colors } from '../lib/constants'
 export default ({children}) => (
 	<div>
 		<HeaderTags/>
-		<div className="container">
+		<div className="outer-container">
 		<Header />
 
 			{children}
@@ -27,11 +27,11 @@ export default ({children}) => (
 
 			//for waves-animation
 			html {
-				background: #3B1BDB;
+				// background: #3B1BDB;
 			}
 
 			body {
-				background: white;
+				// background: white;
 			}
 
 			a {
@@ -48,7 +48,7 @@ export default ({children}) => (
 				padding: 0 20px;
 			}
 
-			.container {
+			.outer-container {
 				max-width: 1100px;
 				margin: 0 auto;
 			}

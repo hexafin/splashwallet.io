@@ -1,8 +1,16 @@
 import { Component } from 'react'
-import Waves from '../components/Waves'
-import SplashTagBar from '../components/SplashTagBar'
-import Hero from '../components/Hero'
-import Footer from '../components/Footer'
+import Waves from './Waves'
+import SplashTagBar from './SplashTagBar'
+import Hero from './Hero'
+import Footer from './Footer'
+import Timer from './Timer'
+import AppStoreDownload from './AppStoreDownload'
+import { colors } from '../lib/constants'
+import easeIn from './animations/easeIn'
+import TimeMessage from './TimeMessage'
+import Welcome from './Welcome'
+import PhoneCapture from './PhoneCapture'
+import PhoneNumberBar from './PhoneNumberBar'
 
 class WaitlistSequence extends Component {
 	constructor(props) {
@@ -16,73 +24,68 @@ class WaitlistSequence extends Component {
 		this.setState({
 			splashtag: splashtag,
 			splashtagChosen: true
-		})
+		},() => setTimeout(() => {
+			this.setState({showPhoneCapture: true})
+		}, 150))
 	}
 
 	render() {
-		
+		const { 
+			splashtagChosen,
+		  splashtag,
+		  showPhoneCapture
+		} = this.state
 		return (
-			<div>
-				{this.state.splashtagChosen ? 
-				<div>
-					<Wel splashtag={this.state.splashtag}/>
-				</div> :
-				<div>
+			<div className="container">
+			
+				{!showPhoneCapture && 
+					<div className="splashtag-container">
 					<Hero/>
 					<SplashTagBar handleSubmit={this.handleSubmit.bind(this)}/>
 				</div>
 				}
-				<Waves />
-				<Footer />
+				{showPhoneCapture && <div className="phone-message">
+						<Wel splashtag={splashtag}/>
+						<EaseInTimeMessage 
+							splashtag={splashtag}
+							start={splashtagChosen}
+							/>
+						<EaseInPhoneCapture splashtag={splashtag}/>
+				</div>
+				}
+				<div>
+					</div>
+					
+				
+				<style jsx>{`
+					.container {
+						display: flex;
+						justify-content: center;
+					}
+
+					.phone-message {
+						display: flex;
+						align-items: center;
+						flex-direction: column;
+					}
+
+					.splashtag-container {
+						transition: all 150ms ease;
+						position: relative;
+						visibility: ${splashtagChosen ? 'hidden' : 'unset'}
+						opacity: ${splashtagChosen ? 0 : 1};
+						transform: ${splashtagChosen ? 'translateY(20px)' : 'translateY(0px)'}
+					}
+
+					`}
+				</style>
 			</div>
 			)
 	}
 } 
 
-
-const makeMoveUp = (Target) => {
-    return class extends Component {
-        constructor(props) {
-            super(props);
-            this.state = {moveTop: false};
-        }
-
-        onClick = () => {
-        	console.log('hey')
-            this.setState({moveTop: !this.state.moveTop});
-        };
-
-        render() {
-            return (
-                <Target isOpen={true}
-                        onClick={this.onClick}
-                        {...this.props}
-                        hide={this.state.moveTop}/>
-            );
-        }
-    }
-};
-
-
-const Welcome = ({splashtag, hide, onClick}) => (
-	<div onClick={onClick} className={[hide && 'hide'].join('')}>
-		Welcome, <br/> @{splashtag}
-		<style jsx>{`
-			div {
-				font-size: 26px;
-				font-weight: 500;
-				text-align: center;
-			}
-			.hide {
-				opacity: 0;
-				transition: all 500ms ease;
-			}
-			`}
-		</style>
-	</div>
-)	
-
-const Wel = makeMoveUp(Welcome)
-
+const Wel = easeIn({delay: 500})(Welcome)
+const EaseInPhoneCapture = easeIn({delay: 1500})(PhoneCapture)
+const EaseInTimeMessage = easeIn({delay: 1200})(TimeMessage)
 
 export default WaitlistSequence

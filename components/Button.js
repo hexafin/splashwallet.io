@@ -14,7 +14,7 @@ const Button = ({children, disabled, onClick, width}) => {
 				font-size: 18px;	
 				height: 63px;	
 				padding: 18px 25px;	
-				background: ${colors.primary};
+				background: #5c16ff;
 				color: white;	
 				border-radius: 4px;
 				border: none;

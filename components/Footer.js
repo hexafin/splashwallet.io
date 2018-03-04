@@ -5,14 +5,14 @@ export default () => (
 			div {
 				text-align: center;
 				background: #3b1bdb;
-				color: #ffffffa6;
+				color: #fff;
 			 	width: 100vw;
         position: relative;
+        padding-bottom: 10px;
         left: 50%;
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
-        margin-bottom: 10px;
 			}
 			`}
 		</style> 
