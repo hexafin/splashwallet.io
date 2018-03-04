@@ -12,6 +12,8 @@ export default () => (
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
+        top: -15px;
+    		margin-bottom: -20px;
 			}
 			`}
 		</style> 

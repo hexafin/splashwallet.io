@@ -4,31 +4,37 @@ const Hero = () => (
 	<div className="hero">
 		<img src="./static/app_Icon.png"/>
 		<div className="text">
-			<h1>Using bitcoin shouldn't be hard</h1>
-			<h2>Reserve your splashtag below</h2>
+			<h1>The most user friendly bitcoin wallet</h1>
+			<h2>Let's make using bitcoin easy</h2>
 		</div>
 		<style jsx>{`
 			.hero {
 				display: flex;
-				justify-content: center;
+				justify-content: flex-start;
 				flex-direction: column;
-				align-items: center;
-				margin-top: 100px;
+				align-items: flex-start;
+				margin-top: 120px;
 
 			}
 
 			@media (max-width: 550px) {
 				.hero {
-					margin-top: 50px;
+					margin-top: 30px;
+					align-items: center;
+					text-align: center;
+				}
+
+				img {
+					display: none;
 				}
 			}
 
 			img {
 				width: 120px;
+				display: none;
 			}
 
 			.text {
-				text-align: center;
 			}
 			
 			h1 {

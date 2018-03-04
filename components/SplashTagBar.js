@@ -175,6 +175,11 @@ class SplashTagBar extends React.Component {
 						display: flex;
 						justify-content: center;
 						flex-direction: column;
+						align-items: flex-start;
+					}
+
+					@media (max-width: 650px) {
+						align-items: center;
 					}
 
 					.splashtagbar {

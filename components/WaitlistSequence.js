@@ -39,10 +39,14 @@ class WaitlistSequence extends Component {
 			<div className="container">
 			
 				{!showPhoneCapture && 
-					<div className="splashtag-container">
-					<Hero/>
-					<SplashTagBar handleSubmit={this.handleSubmit.bind(this)}/>
-				</div>
+					<div className="hero-container">
+						<div className="splashtag-container">
+						<Hero/>
+						<SplashTagBar handleSubmit={this.handleSubmit.bind(this)}/>
+						</div>
+					<AppPreview />
+
+					</div>
 				}
 				{showPhoneCapture && <div className="phone-message">
 						<Wel splashtag={splashtag}/>
@@ -63,13 +67,28 @@ class WaitlistSequence extends Component {
 						justify-content: center;
 					}
 
+					.hero-container {
+						display: flex;
+						justify-content: space-around;
+						width: 100%;
+					}
+
+					@media (max-width: 550px) {
+						.hero-container {
+							flex-direction: column;
+							align-items: center;
+						}
+
+
+					}
+
 					.phone-message {
 						display: flex;
 						align-items: center;
 						flex-direction: column;
 					}
 
-					.splashtag-container {
+					.hero-container {
 						transition: all 150ms ease;
 						position: relative;
 						visibility: ${splashtagChosen ? 'hidden' : 'unset'}
@@ -83,6 +102,69 @@ class WaitlistSequence extends Component {
 			)
 	}
 } 
+
+const AppPreview = () => (
+	<div className="app-preview">
+		<img className="phone" src="./static/phone-image.png"/>
+		<img className="preview" src="./static/app-preview.png"/>
+
+		<style jsx>{`
+
+				.app-preview {
+					position: relative;
+					height: 620px;
+					width: 301px;
+					transform: scale(0.9);
+				} 
+
+
+				.phone {
+					position: absolute;
+			    z-index: 1;
+			    height: 620px;
+				}
+
+				.preview {
+					height: 596px;
+    			left: 13px;
+			    top: 12px;
+			    border-radius: 30px;
+			    position: absolute;
+			    z-index: 0;
+					box-shadow: #00000026 0 15px 70px -10px;
+
+				}
+
+				@media (max-width: 330px) {
+					.app-preview {
+						transform: scale(0.8)
+					}
+				}
+
+				// @media (max-width: 330px) {
+				// 	.app-preview {
+				// 		height: 520px;
+				//     width: 254px;
+				//     margin: 0 auto;
+				// 	}
+
+				// 	.phone {
+				//     z-index: 1;
+				//     height: 520px;
+				// 	}
+
+				// 	.preview {
+				// 		height: 499px;
+				//     left: 11px;
+				//     top: 11px;
+				//     border-radius: 24px;
+				// 	}
+				// }
+
+			`}
+			</style>
+	</div>
+)
 
 const Wel = easeIn({delay: 500})(Welcome)
 const EaseInPhoneCapture = easeIn({delay: 2500})(PhoneCapture)
