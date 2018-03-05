@@ -11,7 +11,7 @@ export default () => {
 
   return (
     <div className="waves-animation">
-      <img src="./static/wave-static.png"/>
+      <img className="background-waves" src="./static/wave-static.png"/>
       <style jsx global>{`
         .waves-animation {
           width: 100vw;
@@ -22,9 +22,13 @@ export default () => {
           margin-right: -50vw;
           // margin-top: 20px;
           top: 0;
-          padding-top: 220px;
+          padding-top: 410px;
           overflow: hidden;
           z-index: -10;
+        }
+
+        .background-waves {
+          width: 120%;
         }
             
         .waves-animation > .react-bodymovin-container > svg {
@@ -34,6 +38,10 @@ export default () => {
         @media (max-width: 850px) {
           .waves-animation > .react-bodymovin-container {
             width: 170vw;
+          }
+
+          .background-waves {
+            width: 300%;
           }
         }
       `}

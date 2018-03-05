@@ -1,5 +1,5 @@
 import Timer from './Timer'
-import { colors } from '../lib/constants'
+import { colors, fonts } from '../lib/constants'
 
 const TimeMessage = ({start}) => (
 	<div>
@@ -16,7 +16,7 @@ const TimeMessage = ({start}) => (
 			}
 			span {
 				color: ${colors.primary};
-				font-weight: 500;
+				font-family: ${fonts.m};
 			}
 			`}
 		</style>

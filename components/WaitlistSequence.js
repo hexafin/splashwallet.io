@@ -49,7 +49,7 @@ class WaitlistSequence extends Component {
 					</div>
 				}
 				{showPhoneCapture && <div className="phone-message">
-						<Wel splashtag={splashtag}/>
+						<EaseInWelcome splashtag={splashtag}/>
 						<EaseInTimeMessage 
 							splashtag={splashtag}
 							start={splashtagChosen}
@@ -65,6 +65,7 @@ class WaitlistSequence extends Component {
 					.container {
 						display: flex;
 						justify-content: center;
+						height: 620px;
 					}
 
 					.hero-container {
@@ -166,7 +167,7 @@ const AppPreview = () => (
 	</div>
 )
 
-const Wel = easeIn({delay: 500})(Welcome)
+const EaseInWelcome = easeIn({delay: 500})(Welcome)
 const EaseInPhoneCapture = easeIn({delay: 2500})(PhoneCapture)
 const EaseInTimeMessage = easeIn({delay: 1300})(TimeMessage)
 

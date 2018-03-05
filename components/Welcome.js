@@ -1,10 +1,12 @@
+import { fonts } from '../lib/constants'
+
 const Welcome = ({splashtag}) => (
 	<div>
 		Welcome, <br/> @{splashtag}
 		<style jsx>{`
 			div {
+				font-family: ${fonts.m};
 				font-size: 28px;
-				font-weight: 500;
 				text-align: center;
 				margin-bottom: 20px;
 				margin-top: 50px;
