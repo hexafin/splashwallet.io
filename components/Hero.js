@@ -1,4 +1,4 @@
-import { colors } from '../lib/constants'
+import { colors, fonts } from '../lib/constants'
 
 const Hero = () => (
 	<div className="hero">
@@ -42,9 +42,9 @@ const Hero = () => (
 			}
 
 			h2 {
-				font-weight: 400;
+				font-family: ${fonts.r};
 				color: ${colors.grey};
-				margin: 0 0 30px;
+				margin: 12px 0 30px;
 			}
 
 			@media (max-width: 550px) {

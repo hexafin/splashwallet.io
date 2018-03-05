@@ -192,7 +192,6 @@ class SplashTagBar extends React.Component {
 					.validationError {
 						margin: 12px auto;
 						color: ${colors.darkGrey};
-						font-weight: 500;
 					}
 
 					`}

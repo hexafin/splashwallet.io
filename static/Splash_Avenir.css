@@ -1,0 +1,46 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3535433, 2018-03-04T17:33:07-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AvenirNextLTPro-Bold by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+ * 
+ * Webfont: AvenirNextLTPro-Demi by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-demi/
+ * 
+ * Webfont: AvenirNextLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-medium/
+ * 
+ * Webfont: AvenirNextLTPro-Regular by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3535433
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright &#x00A9; 2004 - 2017 Monotype GmbH. All rights reserved.
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+// @import url("/count/35f249");
+
+  
+@font-face {font-family: 'AvenirBold';src: url('webfonts/35F249_0_0.eot');src: url('webfonts/35F249_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35F249_0_0.woff2') format('woff2'),url('webfonts/35F249_0_0.woff') format('woff'),url('webfonts/35F249_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvenirDemi';src: url('webfonts/35F249_1_0.eot');src: url('webfonts/35F249_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35F249_1_0.woff2') format('woff2'),url('webfonts/35F249_1_0.woff') format('woff'),url('webfonts/35F249_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvenirMed';src: url('webfonts/35F249_2_0.eot');src: url('webfonts/35F249_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35F249_2_0.woff2') format('woff2'),url('webfonts/35F249_2_0.woff') format('woff'),url('webfonts/35F249_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvenirReg';src: url('webfonts/35F249_3_0.eot');src: url('webfonts/35F249_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35F249_3_0.woff2') format('woff2'),url('webfonts/35F249_3_0.woff') format('woff'),url('webfonts/35F249_3_0.ttf') format('truetype');}
+ 

@@ -6,9 +6,11 @@ export default () => (
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta charSet="utf-8" />
       <link rel="icon" type="image/png" href="./static/splash-favicon.png"/>
-      <link rel="stylesheet" href="https://use.typekit.net/xob8rbo.css"/>
+      <link rel="stylesheet" href="./static/Splash_Avenir.css"/>
       <title>Splash - Let's make crypto easy</title>
        <meta name="description" content="Crypto shouldn't be hard."/>
     </Head>
   </div>
 )
+
+// <link rel="stylesheet" href="https://use.typekit.net/xob8rbo.css"/>

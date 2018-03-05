@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderTags from './HeaderTags'
 import Header from './Header'
-import { colors } from '../lib/constants'
+import { colors, fonts } from '../lib/constants'
 
 export default ({children}) => (
 	<div>
@@ -13,7 +13,7 @@ export default ({children}) => (
 		</div>
 		<style jsx global>{`
 			body, input, button {
-				font-family: proxima-soft, sans-serif;
+				font-family: ${fonts.r};
 			  text-rendering: optimizeLegibility;
 			  -webkit-font-smoothing: antialiased;
 			  -moz-osx-font-smoothing: grayscale;
@@ -23,6 +23,17 @@ export default ({children}) => (
 
 			body, html {
 				margin: 0;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-family: ${fonts.b};
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			div {
+				font-weight: normal;
+				font-style: normal;
 			}
 
 			//for waves-animation

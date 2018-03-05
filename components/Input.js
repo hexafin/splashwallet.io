@@ -13,10 +13,10 @@ const Input = ({isValid, showCheckmark, value, placeholder, handleChange}) => (
 			input {
 				width: 220px;
 				font-size: 18px;
-				padding: 18px 20px;
+				padding: 0 20px;
 				color: ${!isValid ? '#ff3366' : colors.dark};
-				font-weight: 500;
 				border: none;
+				height: 63px;
 				box-shadow: rgba(63,63,63,0.09) 0 6px 34px 0;
 				border-radius: 4px;
 				-webkit-appearance: none;
