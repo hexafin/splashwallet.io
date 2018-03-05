@@ -20,6 +20,12 @@ const AddressToSplashtag = () => (
 					margin-top: 370px;
 				}
 			}
+
+			@media (min-width: 1380px) {
+				.outer {
+					margin-top: 400px;
+				}
+			}
 			h2 {
 				font-size: 32px;
 			}

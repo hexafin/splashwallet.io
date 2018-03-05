@@ -19,7 +19,7 @@ export default () => (
 			}
 			.background {
 				background: url('./static/grey_background.png');
-				background-size: fit;
+				background-size: cover;
 				height: 460px;
 				width: 100vw;
 		    position: absolute;

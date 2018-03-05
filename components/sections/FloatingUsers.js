@@ -85,6 +85,7 @@ const FloatingUserBar = () => (
 	<div className="floating-bar">
 			<FloatingUser 
 				style={{left: '-620px', top: '190px'}}
+				group={1}
 				src="./static/doji.png" 
 				name="daniel"/>
 			<FloatingUser 
@@ -92,10 +93,12 @@ const FloatingUserBar = () => (
 				name="bryce"/>
 			<FloatingUser 
 				style={{left: '-320px', top: '160px'}}
+				group={1}
 				src="./static/jule.png" 
 				name="jaden"/>
 			<FloatingUser 
 				style={{left: '-140px', top: '30px'}}
+				group={1}
 				src="./static/james.png" 
 				name="tony"/>
 			<FloatingUser 
@@ -103,9 +106,11 @@ const FloatingUserBar = () => (
 				src="./static/roland.png" 
 				name="tyler"/>
 			<FloatingUser 
+				group={1}
 				style={{left: '120px', top: '30px'}}
 				name="jackie"/>
 			<FloatingUser 
+				group={1}
 				style={{left: '260px', top: '180px'}}
 				src="./static/me2.png" 
 				name="guilio"/>
@@ -114,6 +119,7 @@ const FloatingUserBar = () => (
 				src="./static/jamie.png" 
 				name="lukas"/>
 			<FloatingUser 
+				group={1}
 				style={{left: '520px', top: '130px'}}
 				src="./static/josi.png" 
 				name="hayley"/>
@@ -150,13 +156,13 @@ const FloatingUserBar = () => (
 	</div>
 )
 
-const FloatingUser = ({src, name, style}) => {
+const FloatingUser = ({src, name, style, group}) => {
 	let showDefault = false
 	if (src == null) {
 		showDefault = true
 	}
 		return (
-			<div style={style} className="outer">
+			<div style={style} className={['outer', group && 'floatDown'].join(' ')}>
 			<div className="halo">
 				<div className="image" style={showDefault ? {background: 'white'} : {backgroundImage: `url(${src})`}}>
 					{showDefault ? 
@@ -197,6 +203,11 @@ const FloatingUser = ({src, name, style}) => {
 							box-shadow: rgba(56,56,56,0.17) 0 1px 20px;
 						}
 
+						.floatDown {
+							animation: float 4s ease-in-out infinite;
+							animation-delay: 2s;
+						}
+
 						.image:hover {
 							transform: scale(1.05);
 					    box-shadow: rgba(56, 56, 56, 0.19) 0 1px 20px;
@@ -222,7 +233,7 @@ const FloatingUser = ({src, name, style}) => {
 								transform: translatey(0px);
 							}
 							50% {
-								transform: translatey(-10px);
+								transform: translatey(-6px);
 							}
 							100% {
 								transform: translatey(0px);

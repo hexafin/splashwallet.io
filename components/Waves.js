@@ -1,5 +1,5 @@
 import Bodymovin from 'react-bodymovin';
-import * as animation from '../animations/waves2.json'
+import * as animation from '../animations/waves3.json'
 
 export default () => {
   const bodymovinOptions = {
@@ -11,7 +11,8 @@ export default () => {
 
   return (
     <div className="waves-animation">
-      <img className="background-waves" src="./static/wave-static.png"/>
+      <Bodymovin options={bodymovinOptions} />
+
       <style jsx global>{`
         .waves-animation {
           width: 100vw;
@@ -50,5 +51,5 @@ export default () => {
   )
 }
 
-     // / <Bodymovin options={bodymovinOptions} />
+      // <img className="background-waves" src="./static/wave-static.png"/>
 
