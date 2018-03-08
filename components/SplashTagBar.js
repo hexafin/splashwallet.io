@@ -24,6 +24,11 @@ class SplashTagBar extends React.Component {
 	handleSubmit(event) {
 		const splashtag = this.state.splashtag
 
+
+		if (this.state.checkingAvailability) {
+			return
+		}
+
 		if (this.validateSplashtag(splashtag)) {
 			axios.post(`${api}/claimSplashtag?splashtag=${splashtag}`)
 			this.setState({

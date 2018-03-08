@@ -11,8 +11,8 @@ export default () => (
 		</div>
 		<div className="row">
 			<a target="_blank" href="">Angelist</a>
-			<a target="_blank" href="">Twitter</a>
-			<a target="_blank" href="">Telegram</a>
+			<a target="_blank" href="https://twitter.com/splashwallet">Twitter</a>
+			<a target="_blank" href="https://t.me/joinchat/EjQODwyF10VliZ4fQ0SL8Q">Telegram</a>
 		</div>
 		<div className="row">
 			<a target="_blank" href="">Press</a>
