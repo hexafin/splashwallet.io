@@ -1,30 +1,37 @@
-import Logo from './Logo'
-import { colors } from '../lib/constants'
+import Logo from "./Logo"
+import { colors } from "../lib/constants"
 
 export default () => (
 	<div className="outer">
 		<div className="boxes">
-		<div className="address">
-			<Logo />
-			<div className="address-content">1085 Harrison Street<br/>
-			San Francisco, CA</div>
+			<div className="address">
+				<Logo />
+				<div className="address-content">
+					254 Elm Street
+					<br />
+					New Haven, CT
+				</div>
+			</div>
+			<div className="row">
+				<a target="_blank" href="https://angel.co/hexa-financial-group">
+					Angelist
+				</a>
+				<a target="_blank" href="https://twitter.com/splashwallet">
+					Twitter
+				</a>
+				<a target="_blank" href="https://t.me/joinchat/EjQODwyF10VliZ4fQ0SL8Q">
+					Telegram
+				</a>
+			</div>
+			<div className="row">
+				<a target="_blank" href="mailto:support@hexafinancial.com">
+					Contact
+				</a>
+			</div>
 		</div>
-		<div className="row">
-			<a target="_blank" href="">Angelist</a>
-			<a target="_blank" href="https://twitter.com/splashwallet">Twitter</a>
-			<a target="_blank" href="https://t.me/joinchat/EjQODwyF10VliZ4fQ0SL8Q">Telegram</a>
-		</div>
-		<div className="row">
-			<a target="_blank" href="">Press</a>
-			<a target="_blank" href="">Contact</a>
-		</div>
-		<div className="row">
-			<a target="_blank" href="">Privacy</a>
-			<a target="_blank" href="">Terms</a>
-		</div>
-	</div>
 		<div className="copyright">Copyright 2018 - Hexa Financial Group Inc.</div>
-		<style jsx>{`
+		<style jsx>
+			{`
 
 			.outer {
 		
@@ -59,11 +66,11 @@ export default () => (
 			.address {
 				display: flex;
 				flex-direction: column;
-				margin-top: -18px;
+				margin-top: -16px;
 			}
 
 			.address-content {
-				line-height: 30px;
+				line-height: 28px;
 				margin-top: -13px;
 				color: ${colors.grey};
 			}
@@ -74,6 +81,19 @@ export default () => (
 				margin-bottom: 10px;
 			}
 			`}
-		</style> 
+		</style>
 	</div>
 )
+
+// <div className="row">
+// 	<a target="_blank" href="">
+// 		Privacy
+// 	</a>
+// 	<a target="_blank" href="">
+// 		Terms
+// 	</a>
+// </div>
+
+// <a target="_blank" href="">
+// 	Press kit
+// </a>
