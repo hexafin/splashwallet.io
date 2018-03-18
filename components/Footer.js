@@ -27,6 +27,9 @@ export default () => (
 				<a target="_blank" href="mailto:support@hexafinancial.com">
 					Contact
 				</a>
+				<a target="_blank" href="/privacy">
+					Privacy
+				</a>
 			</div>
 		</div>
 		<div className="copyright">Copyright 2018 - Hexa Financial Group Inc.</div>
@@ -86,9 +89,7 @@ export default () => (
 )
 
 // <div className="row">
-// 	<a target="_blank" href="">
-// 		Privacy
-// 	</a>
+
 // 	<a target="_blank" href="">
 // 		Terms
 // 	</a>
