@@ -32,6 +32,12 @@ class SplashTagBar extends React.Component {
 			return
 		}
 
+		try {
+			heap.track("ClaimSplashtag", { splashtag: splashtag })
+		} catch (e) {
+			console.log("heap")
+		}
+
 		if (this.validateSplashtag(splashtag)) {
 			axios.post(`${api}/claimSplashtag?splashtag=${splashtag}`)
 			this.setState({
